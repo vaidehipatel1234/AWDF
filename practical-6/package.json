@@ -1,0 +1,15 @@
+{
+  "name": "24cs079-awdf-practical6",
+  "version": "1.0.0",
+  "description": "Practical 6: Full Stack Integration React + Node + MongoDB (ITUE301)",
+  "private": true,
+  "scripts": {
+    "server": "npm --prefix server start",
+    "client": "npm --prefix client dev",
+    "test:server": "npm --prefix server test",
+    "build:client": "npm --prefix client build"
+  },
+  "keywords": ["react", "express", "mongodb", "fullstack", "mongoose", "cors"],
+  "author": "Vaidehi Patel (24CS079)",
+  "license": "ISC"
+}
