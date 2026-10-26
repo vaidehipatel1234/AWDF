@@ -1,6 +1,6 @@
 # ==========================================
 # Practical 11: Backend Node.js Express Dockerfile
-# Student: Jay Ladva (24CS045) | Course: ITUE301
+# Student: Vaidehi Patel (24CS079) | Course: ITUE301
 # ==========================================
 
 FROM node:18-alpine
