@@ -1,0 +1,69 @@
+name: CI Pipeline
+
+# ==============================================================
+# Practical 12: Continuous Integration Pipeline with GitHub Actions
+# Course: Advanced Web Development Frameworks (ITUE301)
+# Student: Vaidehi Patel (24CS079)
+# Triggers: Push to main, Pull Requests targeting main
+# ==============================================================
+
+on:
+  push:
+    branches: [main]
+  # Supplementary Problem 2: Trigger on pull requests targeting main
+  pull_request:
+    branches: [main]
+
+jobs:
+  # Supplementary Problem 1: Second job running code linting and style verification
+  lint:
+    name: Code Linting & Static Analysis
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Runtime
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+          cache-dependency-path: 'client/package-lock.json'
+
+      - name: Install Client Dependencies
+        working-directory: ./client
+        run: npm ci || npm install
+
+      - name: Run Client Linter (Oxlint)
+        working-directory: ./client
+        run: npm run lint
+
+  # Core Job: Build and Automated Testing
+  build-and-test:
+    name: Build & Automated Tests
+    needs: [lint]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 18 Runtime
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install Backend Dependencies
+        working-directory: ./server
+        run: npm install
+
+      - name: Run Backend Automated Tests (CI Suite)
+        working-directory: ./server
+        run: npm test
+
+      - name: Install Frontend Dependencies
+        working-directory: ./client
+        run: npm ci || npm install
+
+      - name: Build Frontend Production Bundle
+        working-directory: ./client
+        run: npm run build
