@@ -1,0 +1,23 @@
+{
+  "name": "24cs079-awdf-practical8",
+  "version": "1.0.0",
+  "description": "Practical 8: Performance Optimization and Lazy Loading in React (ITUE301)",
+  "private": true,
+  "scripts": {
+    "server": "npm --prefix server start",
+    "client": "npm --prefix client dev",
+    "test:server": "npm --prefix server test",
+    "build:client": "npm --prefix client build"
+  },
+  "keywords": [
+    "react",
+    "lazy-loading",
+    "code-splitting",
+    "suspense",
+    "performance-optimization",
+    "vite",
+    "fullstack"
+  ],
+  "author": "Vaidehi Patel (24CS079)",
+  "license": "ISC"
+}
