@@ -1,0 +1,28 @@
+{
+  "name": "24cs079-awdf-practical11",
+  "version": "1.0.0",
+  "description": "Practical 11: Containerization with Docker and Docker Compose (React + Express + MongoDB)",
+  "private": true,
+  "scripts": {
+    "docker:up": "docker compose up --build",
+    "docker:down": "docker compose down",
+    "docker:build": "docker compose build",
+    "server": "npm --prefix server start",
+    "client": "npm --prefix client dev",
+    "test:server": "npm --prefix server test",
+    "build:client": "npm --prefix client build"
+  },
+  "keywords": [
+    "docker",
+    "docker-compose",
+    "containerization",
+    "multi-stage-build",
+    "microservices",
+    "express",
+    "react",
+    "mongodb",
+    "fullstack"
+  ],
+  "author": "Vaidehi Patel (24CS079)",
+  "license": "ISC"
+}

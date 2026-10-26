@@ -1,0 +1,29 @@
+{
+  "name": "task-manager-api-24cs079",
+  "version": "1.0.0",
+  "description": "Task Manager Express Backend containerized with Docker & Docker Compose (Practical 11, ITUE301)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node test-api.js"
+  },
+  "keywords": [
+    "express",
+    "rest-api",
+    "crud",
+    "middleware",
+    "task-manager"
+  ],
+  "author": "Vaidehi Patel (24CS079)",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.7",
+    "express": "^4.22.3",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.11.1",
+    "node-cache": "^5.1.2"
+  }
+}
