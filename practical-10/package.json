@@ -1,0 +1,24 @@
+{
+  "name": "24cs079-awdf-practical10",
+  "version": "1.0.0",
+  "description": "Practical 10: Asynchronous Processing with Event-Driven Architecture (Node.js EventEmitter + Express + MongoDB Atlas)",
+  "private": true,
+  "scripts": {
+    "server": "npm --prefix server start",
+    "client": "npm --prefix client dev",
+    "test:server": "npm --prefix server test",
+    "build:client": "npm --prefix client build"
+  },
+  "keywords": [
+    "nodejs",
+    "eventemitter",
+    "event-driven-architecture",
+    "asynchronous-processing",
+    "non-blocking-io",
+    "express",
+    "mongodb-atlas",
+    "fullstack"
+  ],
+  "author": "Vaidehi Patel (24CS079)",
+  "license": "ISC"
+}
