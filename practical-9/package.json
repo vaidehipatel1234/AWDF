@@ -1,0 +1,23 @@
+{
+  "name": "24cs079-awdf-practical9",
+  "version": "1.0.0",
+  "description": "Practical 9: In-Memory Caching and Query Optimization (node-cache + Express + MongoDB Atlas)",
+  "private": true,
+  "scripts": {
+    "server": "npm --prefix server start",
+    "client": "npm --prefix client dev",
+    "test:server": "npm --prefix server test",
+    "build:client": "npm --prefix client build"
+  },
+  "keywords": [
+    "node-cache",
+    "in-memory-caching",
+    "query-optimization",
+    "cache-invalidation",
+    "express",
+    "mongodb-atlas",
+    "fullstack"
+  ],
+  "author": "Vaidehi Patel (24CS079)",
+  "license": "ISC"
+}
